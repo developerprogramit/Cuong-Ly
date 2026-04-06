@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    
 
 <style id="custom-reveal-effects-style">
 .reveal-on-scroll,.reveal-zoom,.reveal-left,.reveal-right{
@@ -205,21 +205,27 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Thế Cường &amp; Ly Ly Wedding site!</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Thế Cường &amp; Ly Ly - Our wedding date: 2026-04-20 | Tình yêu không chỉ là một danh từ - nó là một động từ; nó còn hơn cả một cảm giác - đó là sự quan tâm, chia sẻ, giúp đỡ, hy sinh">
+    <title>Thế Cường &amp; Ly Ly Wedding site!</title>
+<meta name="description" content="Thiệp cưới của Thế Cường và Ly Ly. Trân trọng kính mời bạn tham dự ngày vui của chúng tôi.">
+<meta property="og:site_name" content="Thế Cường &amp; Ly Ly">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Thế Cường &amp; Ly Ly Wedding site!">
+<meta property="og:description" content="Thiệp cưới của Thế Cường và Ly Ly. Trân trọng kính mời bạn tham dự ngày vui của chúng tôi.">
+<meta property="og:image" content="https://cdn.biihappy.com/ziiweb/website/69c0a7856eeac1cb120a45fc/a93d824ccb36de9919c9c07b42560644.jpeg">
+<meta property="og:image:secure_url" content="https://cdn.biihappy.com/ziiweb/website/69c0a7856eeac1cb120a45fc/a93d824ccb36de9919c9c07b42560644.jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:type" content="image/jpeg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thế Cường &amp; Ly Ly Wedding site!">
+<meta name="twitter:description" content="Thiệp cưới của Thế Cường và Ly Ly. Trân trọng kính mời bạn tham dự ngày vui của chúng tôi.">
+<meta name="twitter:image" content="https://cdn.biihappy.com/ziiweb/website/69c0a7856eeac1cb120a45fc/a93d824ccb36de9919c9c07b42560644.jpeg">
     <meta name="keywords" content="Wedding, Wedding website, Website đám cưới, Tạo website đám cưới miễn phí">
     <meta name="format-detection" content="telephone=no">
     <meta name="application-name" content="iWedding">
     <meta name="author" content="Biihappy.com">
-    <meta property="og:site_name" content="Thế Cường &amp; Ly Ly">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Thế Cường &amp; Ly Ly Wedding site!">
-    <meta property="og:url" content="https://lycuong.iwedding.info">
-    <meta property="og:description" content="Thế Cường &amp; Ly Ly - Our wedding date: 2026-04-20 | Tình yêu không chỉ là một danh từ - nó là một động từ; nó còn hơn cả một cảm giác - đó là sự quan tâm, chia sẻ, giúp đỡ, hy sinh">
-    <meta property="og:image" content="https://cdn.biihappy.com/ziiweb/website/69c0a7856eeac1cb120a45fc/a93d824ccb36de9919c9c07b42560644.jpeg">
-    <meta property="og:image:url" content="https://cdn.biihappy.com/ziiweb/website/69c0a7856eeac1cb120a45fc/a93d824ccb36de9919c9c07b42560644.jpeg">
-    <meta property="og:image:secure_url" content="https://cdn.biihappy.com/ziiweb/website/69c0a7856eeac1cb120a45fc/a93d824ccb36de9919c9c07b42560644.jpeg">
     <link rel="shortcut icon" type="image/x-icon" href="https://iwedding.info/favicon.ico">
     <link rel="stylesheet" type="text/css" href="https://lycuong.iwedding.info/templates/template18/css/libs.css?v=20251121">
     <link href="https://lycuong.iwedding.info/common/calendar.css?v=20251121" rel="stylesheet">
@@ -854,14 +860,37 @@
         <section id="gift-box" class="rsvp">
         <div class="rsvp-widgets">
             <div class="section-title wow fadeInDown reveal-on-scroll">
-                <h2>Hộp mừng</h2>
+                <h2>Hộp mừng cưới</h2>
             </div>
             <div class="container">
-                <div class="row dual-gift-row" style="display:flex;justify-content:center;flex-wrap:wrap;gap:24px;">
-                    <div class="col-md-6 col-sm-10 col-sm-offset-1 col-md-offset-0">
+                <div class="row dual-gift-row">
+                    <div class="gift-col">
                         <div class="wish-box ft-about-content mystery-gift-inline reveal-left reveal-delay-1">
                             <style>
-                                .dual-gift-row{align-items:stretch;}
+                                .dual-gift-row{
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:stretch;
+    gap:24px;
+    margin-left:0 !important;
+    margin-right:0 !important;
+}
+.dual-gift-row:before,
+.dual-gift-row:after{display:none !important;}
+.dual-gift-row > .gift-col{
+    float:none !important;
+    width:calc(50% - 12px);
+    max-width:520px;
+    padding-left:0 !important;
+    padding-right:0 !important;
+    margin:0 !important;
+    display:flex;
+}
+.dual-gift-row > .gift-col .mystery-gift-inline{
+    width:100%;
+    display:flex;
+}
                                 .mystery-gift-inline{padding:0;background:transparent;box-shadow:none;border:none !important;outline:none !important;}
                                 .mystery-gift-inline, .mystery-gift-inline *{box-sizing:border-box;}
                                 .mystery-gift-inline .mystery-gift-shell,
@@ -923,6 +952,7 @@
                                 @keyframes giftPulse{0%,100%{transform:translate(-50%,-50%) scale(1);}50%{transform:translate(-50%,-50%) scale(1.08);}}
                                 @media (max-width: 991px){
                                     .dual-gift-row{gap:18px;}
+                                    .dual-gift-row > .gift-col{width:min(100%, 560px);}
                                 }
                                 @media (max-width: 767px){
                                     .mystery-gift-inline .mystery-gift-title-wrap h2{font-size:26px;}
@@ -938,7 +968,7 @@
                                 <div class="latest-posts-widget widget wow fadeIn mystery-gift-card gift-theme-bride reveal-zoom reveal-delay-1">
                                     <div class="mystery-gift-title-wrap">
                                         <span class="gift-person-tag">Cô dâu</span>
-                                        <h2>Hộp mừng cô dâu</h2>
+                                        <h2>Hộp mừng cô dâu</h2>                                        
                                     </div>
                                     <div class="gift-scene">
                                         <div class="gift-shadow"></div>
@@ -958,19 +988,19 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="gift-note"><strong>Nguyễn Thị Ly</strong></div>
+                                    <div class="gift-note"><strong>Nguyễn Thị Ly</strong>Cảm ơn tình cảm của mọi người đã dành cho chúng mình.</div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="col-md-6 col-sm-10 col-sm-offset-1 col-md-offset-0">
+                    <div class="gift-col">
                         <div class="wish-box ft-about-content mystery-gift-inline reveal-right reveal-delay-2">
                             <div class="mystery-gift-shell">
                                 <div class="latest-posts-widget widget wow fadeIn mystery-gift-card gift-theme-groom reveal-zoom reveal-delay-2">
                                     <div class="mystery-gift-title-wrap">
                                         <span class="gift-person-tag">Chú rể</span>
-                                        <h2>Hộp mừng chú rể</h2>
+                                        <h2>Hộp mừng chú rể</h2>                                        
                                     </div>
                                     <div class="gift-scene">
                                         <div class="gift-shadow"></div>
@@ -990,7 +1020,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="gift-note"><strong>Hoàng Thế Cường</strong></div>
+                                    <div class="gift-note"><strong>Hoàng Thế Cường</strong>Cảm ơn tình cảm của mọi người đã dành cho chúng mình.</div>
                                 </div>
                             </div>
                         </div>
