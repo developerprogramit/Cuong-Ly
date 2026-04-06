@@ -207,11 +207,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Thế Cường &amp; Ly Ly Wedding</title>
+    <title>Thế Cường &amp; Ly Ly Wedding site!</title>
 <meta name="description" content="Thiệp cưới của Thế Cường và Ly Ly. Trân trọng kính mời bạn tham dự ngày vui của chúng tôi.">
 <meta property="og:site_name" content="Thế Cường &amp; Ly Ly">
 <meta property="og:type" content="website">
-<meta property="og:title" content="Thế Cường &amp; Ly Ly Wedding">
+<meta property="og:title" content="Thế Cường &amp; Ly Ly Wedding site!">
 <meta property="og:description" content="Thiệp cưới của Thế Cường và Ly Ly. Trân trọng kính mời bạn tham dự ngày vui của chúng tôi.">
 <meta property="og:image" content="https://cdn.biihappy.com/ziiweb/website/69c0a7856eeac1cb120a45fc/a93d824ccb36de9919c9c07b42560644.jpeg">
 <meta property="og:image:secure_url" content="https://cdn.biihappy.com/ziiweb/website/69c0a7856eeac1cb120a45fc/a93d824ccb36de9919c9c07b42560644.jpeg">
@@ -857,8 +857,8 @@
 	                    </div>
 	    </section>
     
-        <section id="gift-box" class="rsvp">
-        <div class="rsvp-widgets">
+        <section id="gift-box" class="rsvp" >
+        <div class="rsvp-widgets" style="padding-bottom: 0px !important;">
             <div class="section-title wow fadeInDown reveal-on-scroll">
                 <h2>Hộp mừng cưới</h2>
             </div>
@@ -954,7 +954,81 @@
                                     .dual-gift-row{gap:18px;}
                                     .dual-gift-row > .gift-col{width:min(100%, 560px);}
                                 }
-                                @media (max-width: 767px){
+                                
+        .gift-bottom-invite{
+            margin: 34px auto 0;
+            max-width: 980px;
+            padding: 34px 30px 38px;
+            border-radius: 30px;
+            background: linear-gradient(135deg, rgba(255,255,255,.94), rgba(255,244,248,.97) 45%, rgba(241,247,255,.97));
+            box-shadow: 0 18px 48px rgba(0,0,0,.08);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .gift-bottom-invite:before,
+        .gift-bottom-invite:after{
+            content:"";
+            position:absolute;
+            width:220px;
+            height:220px;
+            border-radius:50%;
+            opacity:.28;
+            pointer-events:none;
+            filter:blur(8px);
+        }
+        .gift-bottom-invite:before{
+            left:-70px;
+            top:-90px;
+            background: radial-gradient(circle, rgba(255,168,196,.8), rgba(255,168,196,0));
+        }
+        .gift-bottom-invite:after{
+            right:-70px;
+            bottom:-100px;
+            background: radial-gradient(circle, rgba(132,180,255,.75), rgba(132,180,255,0));
+        }
+        .gift-bottom-invite .invite-mini{
+            position:relative;
+            z-index:1;
+            display:inline-block;
+            margin-bottom:14px;
+            padding:8px 18px;
+            border-radius:999px;
+            background: rgba(255,255,255,.74);
+            font-size:13px;
+            letter-spacing:2.6px;
+            font-weight:700;
+            color:#7b5a72;
+        }
+        .gift-bottom-invite .invite-text{
+            position:relative;
+            z-index:1;
+            margin:0 auto;
+            max-width:760px;
+            font-size:22px;
+            line-height:1.8;
+            color:#4b4453;
+            font-weight:600;
+        }
+        @media (max-width: 767px){
+            .gift-bottom-invite{
+                margin: 24px 10px 0;
+                padding: 24px 18px 28px;
+                border-radius: 22px;
+            }
+            .gift-bottom-invite .invite-mini{
+                font-size:11px;
+                letter-spacing:1.8px;
+                padding:7px 14px;
+                margin-bottom:10px;
+            }
+            .gift-bottom-invite .invite-text{
+                font-size:16px;
+                line-height:1.7;
+            }
+        }
+
+        @media (max-width: 767px){
                                     .mystery-gift-inline .mystery-gift-title-wrap h2{font-size:26px;}
                                     .mystery-gift-inline .mystery-gift-card{padding:26px 16px 28px;border-radius:22px;}
                                     .mystery-gift-inline .gift-scene{width:min(100%,290px);height:260px;}
@@ -968,7 +1042,7 @@
                                 <div class="latest-posts-widget widget wow fadeIn mystery-gift-card gift-theme-bride reveal-zoom reveal-delay-1">
                                     <div class="mystery-gift-title-wrap">
                                         <span class="gift-person-tag">Cô dâu</span>
-                                        <h2>Hộp mừng cô dâu</h2>                                        
+                                        <h2>Hộp mừng cô dâu</h2>
                                     </div>
                                     <div class="gift-scene">
                                         <div class="gift-shadow"></div>
@@ -1000,7 +1074,7 @@
                                 <div class="latest-posts-widget widget wow fadeIn mystery-gift-card gift-theme-groom reveal-zoom reveal-delay-2">
                                     <div class="mystery-gift-title-wrap">
                                         <span class="gift-person-tag">Chú rể</span>
-                                        <h2>Hộp mừng chú rể</h2>                                        
+                                        <h2>Hộp mừng chú rể</h2>
                                     </div>
                                     <div class="gift-scene">
                                         <div class="gift-shadow"></div>
@@ -1030,6 +1104,12 @@
         </div>
     </section>
     
+    
+                <div class="gift-bottom-invite reveal-on-scroll reveal-delay-2">
+                    <span class="invite-mini">TRÂN TRỌNG KÍNH MỜI</span>
+                    <p class="invite-text">Đến dự bữa tiệc thân mật mừng hạnh phúc cùng gia đình chúng tôi</p>
+                </div>
+
     <footer id="footer" class="footer-widgets" style="background-image: url(https://cdn.biihappy.com/ziiweb/website/69c0a7856eeac1cb120a45fc/galleries/69c86c3a25a28230320f5ae7/large.jpg);background-repeat: no-repeat;background-size: cover;background-position: bottom;background-attachment: fixed;width:100%">
 <div class="footer-note reveal-on-scroll">
             <h1>Thank you!</h1>
