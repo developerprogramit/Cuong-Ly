@@ -57,7 +57,7 @@
   opacity:1;
   transform:translate3d(0,0,0) scale(1);
   filter:blur(0);
-  animation:revealLuxuryFlow 1.6s cubic-bezier(.16,.82,.20,1) both;
+  animation:none;
 }
 
 .reveal-delay-1{transition-delay:.14s;animation-delay:.14s;}
@@ -70,11 +70,6 @@
     opacity:0;
     transform:translate3d(0,86px,0) scale(.965);
     filter:blur(12px);
-  }
-  55%{
-    opacity:1;
-    transform:translate3d(0,-3px,0) scale(1.006);
-    filter:blur(0);
   }
   100%{
     opacity:1;
@@ -90,6 +85,112 @@
     filter:none;
     transition:none;
     animation:none;
+  }
+}
+</style>
+
+
+<style id="quote-text-soft-style">
+.quote-counter .quote-text-soft{
+  opacity:0;
+  transform:translate3d(0,28px,0);
+  filter:blur(4px);
+  animation:quoteTextSoftReveal 2s cubic-bezier(.18,.78,.24,1) .45s forwards;
+  will-change:opacity,transform,filter;
+}
+@keyframes quoteTextSoftReveal{
+  0%{opacity:0;transform:translate3d(0,28px,0);filter:blur(4px);}
+  100%{opacity:1;transform:translate3d(0,0,0);filter:blur(0);}
+}
+@media (prefers-reduced-motion: reduce){
+  .quote-counter .quote-text-soft{
+    opacity:1;
+    transform:none;
+    filter:none;
+    animation:none;
+  }
+}
+</style>
+
+<style id="hero-banner-intro-style">
+#wd-banner{position:relative;overflow:hidden;}
+#wd-banner:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  background:radial-gradient(circle at 50% 42%, rgba(255,255,255,.12) 0%, rgba(255,255,255,.04) 30%, rgba(0,0,0,.18) 100%);
+  opacity:0;
+  z-index:1;
+  pointer-events:none;
+  animation:wdBannerOverlayReveal 2.1s ease forwards;
+}
+#wd-banner .swiper-container,
+#wd-banner .swiper-wrapper,
+#wd-banner .swiper-slide,
+#wd-banner .slide-inner,
+#wd-banner .banner_caption_text{position:relative;z-index:2;}
+#wd-banner .slide-inner{
+  transform:scale(1.09);
+  filter:blur(10px) brightness(.88);
+  opacity:.35;
+  will-change:transform,filter,opacity;
+  animation:wdBannerImageReveal 2.6s cubic-bezier(.18,.78,.24,1) forwards;
+}
+#wd-banner .banner_caption_text{
+  opacity:0;
+  transform:translate3d(0,42px,0) scale(.96);
+  filter:blur(8px);
+  will-change:opacity,transform,filter;
+  animation:wdBannerCaptionReveal 1.9s cubic-bezier(.18,.78,.24,1) .45s forwards;
+}
+#wd-banner .banner_caption_text .heart-arrow,
+#wd-banner .banner_caption_text .heart-arrow1,
+#wd-banner .banner_caption_text .heart-arrow2,
+#wd-banner .banner_caption_text h3,
+#wd-banner .banner_caption_text h2,
+#wd-banner .banner_caption_text .text-date{
+  opacity:0;
+  transform:translate3d(0,20px,0);
+  filter:blur(4px);
+  animation:wdBannerTextRise 1.2s cubic-bezier(.18,.78,.24,1) forwards;
+}
+#wd-banner .banner_caption_text .heart-arrow{animation-delay:.75s;}
+#wd-banner .banner_caption_text .heart-arrow1{animation-delay:.9s;}
+#wd-banner .banner_caption_text .heart-arrow2{animation-delay:1.05s;}
+#wd-banner .banner_caption_text h3{animation-delay:.95s;}
+#wd-banner .banner_caption_text h2{animation-delay:1.15s;}
+#wd-banner .banner_caption_text .text-date{animation-delay:1.35s;}
+@keyframes wdBannerImageReveal{
+  0%{opacity:.25;transform:scale(1.12);filter:blur(12px) brightness(.82);}
+  55%{opacity:.8;transform:scale(1.04);filter:blur(2px) brightness(.94);}
+  100%{opacity:1;transform:scale(1);filter:blur(0) brightness(1);}
+}
+@keyframes wdBannerCaptionReveal{
+  0%{opacity:0;transform:translate3d(0,42px,0) scale(.96);filter:blur(8px);}
+  100%{opacity:1;transform:translate3d(0,0,0) scale(1);filter:blur(0);}
+}
+@keyframes wdBannerTextRise{
+  0%{opacity:0;transform:translate3d(0,20px,0);filter:blur(4px);}
+  100%{opacity:1;transform:translate3d(0,0,0);filter:blur(0);}
+}
+@keyframes wdBannerOverlayReveal{
+  0%{opacity:0;}
+  100%{opacity:1;}
+}
+@media (prefers-reduced-motion: reduce){
+  #wd-banner:before,
+  #wd-banner .slide-inner,
+  #wd-banner .banner_caption_text,
+  #wd-banner .banner_caption_text .heart-arrow,
+  #wd-banner .banner_caption_text .heart-arrow1,
+  #wd-banner .banner_caption_text .heart-arrow2,
+  #wd-banner .banner_caption_text h3,
+  #wd-banner .banner_caption_text h2,
+  #wd-banner .banner_caption_text .text-date{
+    animation:none !important;
+    opacity:1 !important;
+    transform:none !important;
+    filter:none !important;
   }
 }
 </style>
@@ -246,15 +347,13 @@
 .reveal-zoom{transform:translateY(64px) scale(.9);transition:opacity 1.08s ease, transform 1.08s cubic-bezier(.16,.84,.28,1);}
 .reveal-left{transform:translate3d(-72px,36px,0) scale(.97);transition:opacity 1.08s ease, transform 1.08s cubic-bezier(.16,.84,.28,1);}
 .reveal-right{transform:translate3d(72px,36px,0) scale(.97);transition:opacity 1.08s ease, transform 1.08s cubic-bezier(.16,.84,.28,1);}
-.reveal-on-scroll.reveal-visible,.reveal-zoom.reveal-visible,.reveal-left.reveal-visible,.reveal-right.reveal-visible{opacity:1;transform:translate3d(0,0,0) scale(1);animation:revealFloatSoft 1.35s cubic-bezier(.18,.78,.24,1) both;}
+.reveal-on-scroll.reveal-visible,.reveal-zoom.reveal-visible,.reveal-left.reveal-visible,.reveal-right.reveal-visible{opacity:1;transform:translate3d(0,0,0) scale(1);animation:none;}
 .reveal-delay-1{transition-delay:.14s;animation-delay:.14s;}
 .reveal-delay-2{transition-delay:.28s;animation-delay:.28s;}
 .reveal-delay-3{transition-delay:.42s;animation-delay:.42s;}
 .reveal-delay-4{transition-delay:.56s;animation-delay:.56s;}
 @keyframes revealFloatSoft{
   0%{opacity:0;transform:translate3d(0,78px,0) scale(.96);}
-  68%{opacity:1;transform:translate3d(0,-6px,0) scale(1.008);}
-  84%{transform:translate3d(0,3px,0) scale(.998);}
   100%{opacity:1;transform:translate3d(0,0,0) scale(1);}
 }
 @media (prefers-reduced-motion: reduce){
@@ -680,7 +779,7 @@
                         <div class="quote-titles wow fadeInDown">
                             <h2>Love Quote</h2>
                         </div>
-                        <p>Anh sẽ cho em tất cả cuộc đời này để đổi lại được nhìn thấy em cười, được nắm tay em. Anh sẽ luôn lắng nghe mọi điều em nói, anh sẽ luôn ở bên em. Anh sẽ cố gắng để làm cho em thật hạnh phúc! Hãy tin anh, em nhé!</p>
+                        <p class="quote-text-soft">Anh sẽ cho em tất cả cuộc đời này để đổi lại được nhìn thấy em cười, được nắm tay em. Anh sẽ luôn lắng nghe mọi điều em nói, anh sẽ luôn ở bên em. Anh sẽ cố gắng để làm cho em thật hạnh phúc! Hãy tin anh, em nhé!</p>
                     </div>
                 </div>
             </div>
@@ -908,7 +1007,25 @@
                                 .mystery-gift-inline .mystery-gift-title-wrap .gift-person-tag{display:inline-block;padding:8px 16px;border-radius:999px;background:rgba(255,255,255,.7);font-size:13px;letter-spacing:.12em;text-transform:uppercase;color:#c86b8c;margin-bottom:12px;font-weight:700;}
                                 .mystery-gift-inline .mystery-gift-title-wrap h2{margin:0;font-size:30px;line-height:1.2;}
                                 .mystery-gift-inline .mystery-gift-subtitle{margin:10px 0 0;color:#7c6f77;font-size:15px;line-height:1.6;}
-                                .mystery-gift-inline .mystery-gift-card{position:relative;padding:32px 24px 34px;border-radius:28px;background:rgba(255,255,255,.94);box-shadow:0 18px 50px rgba(0,0,0,.10);overflow:hidden;height:100%;}
+
+                                .mystery-gift-inline .mystery-gift-card{position:relative;padding:32px 24px 34px;border-radius:36px;background:rgba(255,255,255,.96);box-shadow:0 22px 60px rgba(0,0,0,.12), 0 6px 22px rgba(255,182,193,.18);overflow:hidden;height:100%;border:1px solid rgba(255,255,255,.75);}
+                                .dual-gift-row > .gift-col{border-radius:36px;}
+                                .mystery-gift-inline .mystery-gift-shell{border-radius:36px;}
+                                .mystery-gift-inline .mystery-gift-card.gift-theme-bride{background:linear-gradient(180deg,rgba(255,255,255,.97) 0%,rgba(255,243,247,.98) 100%);box-shadow:0 24px 60px rgba(214,106,145,.16),0 8px 24px rgba(0,0,0,.10);}
+                                .mystery-gift-inline .mystery-gift-card.gift-theme-groom{background:linear-gradient(180deg,rgba(255,255,255,.97) 0%,rgba(245,248,255,.98) 100%);box-shadow:0 24px 60px rgba(105,131,186,.16),0 8px 24px rgba(0,0,0,.10);}
+                                .mystery-gift-inline .mystery-gift-card:after{content:"";position:absolute;inset:10px;border-radius:28px;border:1px solid rgba(255,255,255,.55);pointer-events:none;}
+                                .dual-gift-row > .gift-col,
+                                .dual-gift-row > .gift-col .mystery-gift-inline,
+                                .mystery-gift-inline .mystery-gift-shell,
+                                .mystery-gift-inline .mystery-gift-card,
+                                .gift-col,
+                                .wish-box,
+                                .ft-about-content{
+                                    overflow: visible !important;
+                                    overflow-y: visible !important;
+                                    height: auto !important;
+                                    max-height: none !important;
+                                }
                                 .mystery-gift-inline .mystery-gift-card:before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(255,255,255,.92),rgba(255,245,248,.94));pointer-events:none;}
                                 .mystery-gift-inline .mystery-gift-card > *{position:relative;z-index:1;}
                                 .mystery-gift-inline .gift-scene{position:relative;width:min(100%,320px);height:280px;margin:0 auto 10px;display:flex;align-items:center;justify-content:center;}
